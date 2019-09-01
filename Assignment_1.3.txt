@@ -1,0 +1,58 @@
+1. What are the different methods to call a function in R? 
+Answer:
+Calling a Function without an Argument
+
+# Create a function without an argument.
+new.function <- function() {
+   for(i in 1:5) {
+      print(i^2)
+   }
+}	
+
+# Call the function without supplying an argument.
+new.function()
+
+Calling a Function with Argument Values (by position and by name)
+
+The arguments to a function call can be supplied in the same sequence as defined in the function or they can be supplied in a different sequence but assigned to the names of the arguments.
+
+# Create a function with arguments.
+new.function <- function(a,b,c) {
+   result <- a * b + c
+   print(result)
+}
+
+# Call the function by position of arguments.
+new.function(5,3,11)
+
+# Call the function by names of the arguments.
+new.function(a = 11, b = 5, c = 3)
+
+Calling a Function with Default Argument
+
+We can define the value of the arguments in the function definition and call the function without supplying any argument to get the default result. But we can also call such functions by supplying new values of the argument and get non default result.
+
+# Create a function with arguments.
+new.function <- function(a = 3, b = 6) {
+   result <- a * b
+   print(result)
+}
+
+# Call the function without giving any argument.
+new.function()
+
+# Call the function with giving new values of the argument.
+new.function(9,5)
+
+2. The lazy evaluation of a function means, the argument is evaluated only if it is used inside the body of the function. Say True or False. 
+Answer: TRUE
+
+3. State True or False: 
+a. Insights driven from descriptive analytics is not meaningful. 	
+Answer: FALSE
+b. The number of values in each Elements of a list, should be equal. 	
+Answer: FALSE
+c. The datasets are not stored in memory of the computer using R.	 
+Answer: TRUE
+d. Data frames and matrices are two dimensional however the array is multidimensional. 	
+Answer: TRUE
